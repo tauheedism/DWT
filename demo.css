@@ -1,0 +1,21 @@
+
+.container {
+  display: flex;
+  height: 100vh; /* set height of container to viewport height */
+}
+
+.left {
+  flex: 1; /* take up half of container width */
+  overflow-y: auto; /* add vertical scroll if needed */
+}
+
+.right {
+  flex: 1; /* take up half of container width */
+}
+
+
+  .select-scanner{
+    position: relative; 
+    width: 220px
+  }
+  

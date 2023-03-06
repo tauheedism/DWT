@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="demo1.css" />
+    <title>Application</title>
+    <script type="text/javascript" src="Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script type="text/javascript" src="Resources/dynamsoft.webtwain.config.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="dwtcontrolContainer" class="left"></div>
+      <div class="right">
+        <div class="select-scanner">
+          SelectSource:<select
+            size="1"
+            id="source"
+          >
+            <option value="0">Twain Software Scanner</option>
+          </select>
+        </div>
+        <div>
+          Pixel Type:
+          <label for="BW"
+            ><input type="radio" id="BW" name="PixelType" />B&amp;W
+          </label>
+          <label for="Gray"
+            ><input type="radio" id="Gray" name="PixelType" />Gray</label
+          >
+          <label for="RGB"
+            ><input
+              type="radio"
+              id="RGB"
+              name="PixelType"
+              checked="checked"
+            />Color</label
+          >
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" id="ADF" checked="checked" />Auto
+            Feeder</label
+          >
+          <label>
+            <input type="checkbox" id="ShowUI" checked="checked" />Show UI<br
+          /></label>
+        </div>
+        <div>
+          Resolution:
+          <select size="1" id="Resolution">
+            <option value="100">100</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+          </select>
+        </div>
+        <br />
+        <br />
+        <br />
+        <input type="button" value="Scan and Save 1" id="Scan and Save 1" onclick="AcquireImage();" />
+        <br />
+        <br />
+  
+        <input type="button" value="Scan and Save 2" id="" onclick="AcquireImage();" />
+        <br />
+        <br />
+        <input type="button" value="Remove Blank Images" id="remove-blank-images-button" onclick="AcquireImage();" />
+        <br />
+        <br />
+        <input type="button" value="Remove All Images" id="remove-all-images-button" onclick="AcquireImage();" />
+      </div>
+    </div>
+
+    <script src="demo1.js"></script>
+  </body>
+</html>
